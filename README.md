@@ -16,7 +16,7 @@
 
 3. **Complete operations layer**
    - Ensure safe guards on `swap` for <2 nodes.
-   - Provide combined ops `ss`, `rr`, `rrr` that reuse single-stack helpers and print once.
+   - Add missing combined ops (`ss`, `rrr`) and ensure shared helpers are used so each combined move prints once (align existing `rr` accordingly).
    - Keep outputs exactly as required (`sa`, `pb`, etc.) with newline.
 
 4. **Small input strategies**
@@ -39,4 +39,3 @@
 
 9. **Style & portability**
    - Conform to project norm (headers, includes, no forbidden functions), add missing includes (`stdlib.h`, `unistd.h`) where required, and keep functions below line limits.
-
