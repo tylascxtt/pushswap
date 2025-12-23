@@ -15,7 +15,7 @@
    - Create an array copy to sort and assign each node its compressed index (ranking) to make radix/chunk sorting easier.
 
 3. **Complete operations layer**
-   - Ensure safe guards on `swap` for <2 nodes.
+   - Ensure safeguards on `swap` for <2 nodes.
    - Add missing combined ops (`ss`, `rrr`) and follow the existing `rr` pattern (silent single-stack calls then one combined print) so each combined move is logged only once.
    - Keep outputs exactly as required (`sa`, `pb`, etc.) with newline.
 
@@ -24,7 +24,7 @@
    - Size 4–5: push smallest elements to B, sort remaining 3 in A, then push back.
 
 5. **General sorting approach**
-   - Radix sort on indices (bitwise) or chunk-based approach; choose one and keep moves minimal.
+   - Prefer binary radix on indices for all sizes (simple and within move limits up to 500); consider chunk-based pushes only if you later optimize move counts for medium inputs (e.g., 100–500).
    - Determine max bit-length from the highest index to bound loops.
 
 6. **Error handling & exit**
