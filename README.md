@@ -16,7 +16,7 @@
 
 3. **Complete operations layer**
    - Ensure safe guards on `swap` for <2 nodes.
-   - Add missing combined ops (`ss`, `rrr`) and ensure shared helpers are used so each combined move prints once (align existing `rr` accordingly).
+   - Add missing combined ops (`ss`, `rrr`) and follow the existing `rr` pattern (silent single-stack calls then one combined print) so each combined move is logged only once.
    - Keep outputs exactly as required (`sa`, `pb`, etc.) with newline.
 
 4. **Small input strategies**
